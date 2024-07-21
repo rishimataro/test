@@ -43,6 +43,7 @@ int main(){
         cout << "Bạn có tiếp tục không? (y/n) ";
         tt = getch();
         if(tt != 'y') break;
+        system("cls");
     }
     return 0;
 }
