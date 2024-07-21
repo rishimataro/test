@@ -14,7 +14,6 @@ int main(){
     bool validInput;
     char tt;
 
-    //* Lấy thời gian thực từ máy tính
     time_t Time = time(NULL);
     tm *Now = localtime(&Time);
     nYear = Now->tm_year + 1900;
