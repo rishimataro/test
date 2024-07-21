@@ -6,6 +6,10 @@
 
 using namespace std;
 
+void printName() {
+    cout << "NGOC THAO!" << endl;
+}
+
 int main(){
     SetConsoleOutputCP(65001);
 
@@ -44,6 +48,7 @@ int main(){
         tt = getch();
         if(tt != 'y') break;
     }
+    printName();
 
     return 0;
 }
