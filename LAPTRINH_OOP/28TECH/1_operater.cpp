@@ -11,6 +11,7 @@ class soPhuc
         friend ostream& operator << (ostream& out, soPhuc a);    
         soPhuc operator + (soPhuc another);
         soPhuc operator - (soPhuc another);
+        bool operator == (soPhuc another);
 };
 
 istream& operator >> (istream& in, soPhuc& a){
@@ -38,6 +39,10 @@ soPhuc soPhuc::operator - (soPhuc another){
     return hieu;
 }
 
+bool soPhuc::operator == (soPhuc another){
+    return this->thuc == another.thuc && this->ao == another.ao;
+}
+
 int main() {
     soPhuc x, y;
     cin >> x >> y;
@@ -47,6 +52,9 @@ int main() {
 
     cout << tong << endl;
     cout << hieu << endl;
+
+    if (x == y) cout << "x bang y\n";
+    else cout << "x khong bang y\n";
 
     return 0;
 }
