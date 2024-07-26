@@ -46,10 +46,14 @@ void PhanSo::rutgon() {
 
 PhanSo operator + (PhanSo a, PhanSo b) {
     PhanSo tong(1, 1);
+
     int mauchung = BCNN(a.mau, b.mau);
 
     tong.tu = mauchung/a.mau * a.tu + mauchung/b.mau * b.tu;
     tong.mau = mauchung;
+
+    // tong.tu = a.tu * b.mau + b.tu * a.mau;
+    // tong.mau = a.mau * b.mau;
 
     tong.rutgon();
 
